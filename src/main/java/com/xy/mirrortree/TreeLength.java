@@ -1,5 +1,7 @@
 package com.xy.mirrortree;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -10,11 +12,11 @@ import java.util.Set;
  */
 public class TreeLength {
     public static void main(String[] args) {
-
+        maxDepth(new TreeNode());
     }
 
     //递归方法 DFS（深度优先搜索）
-    private int maxDepth(TreeNode root){
+    private static int maxDepth(TreeNode root){
         if(root == null){
             return 0;
         }
