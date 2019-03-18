@@ -1,4 +1,4 @@
-package com.xy.mirrortree;
+package com.xy.tree;
 
 public class TreeNode {
     private TreeNode left;

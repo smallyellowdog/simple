@@ -1,4 +1,4 @@
-package com.xy.mirrortree;
+package com.xy.tree;
 
 public class TreeNodeTool {
     public static TreeNode initData(){

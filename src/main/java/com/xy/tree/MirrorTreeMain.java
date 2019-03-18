@@ -1,4 +1,4 @@
-package com.xy.mirrortree;
+package com.xy.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
