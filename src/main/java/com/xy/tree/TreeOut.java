@@ -8,7 +8,7 @@ import java.util.Queue;
 public class TreeOut {
     public static void main(String[] args) {
         TreeNode root = TreeNodeTool.initData();
-        List<String> treeData = outTree(root);
+        List<String> treeData = zigzagLevelOrder(root);
         System.out.print(treeData);
     }
 
@@ -33,6 +33,45 @@ public class TreeOut {
             if(node.getRight() != null){
                 queue.add(node.getRight());
             }
+        }
+        return nodeDataList;
+    }
+
+    /**
+     * 锯齿打印二叉树
+     */
+    private static List<String> zigzagLevelOrder(TreeNode root){
+        if(root == null){
+            return new ArrayList<String>();
+        }
+
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(root);
+
+        List<String> nodeDataList = new ArrayList<String>();
+        boolean flag = true;
+        while (!queue.isEmpty()){
+            TreeNode node = queue.poll();
+            nodeDataList.add(node.getData());
+
+            if(flag){
+                if(node.getLeft() != null){
+                    queue.add(node.getLeft());
+                }
+                if(node.getRight() != null){
+                    queue.add(node.getRight());
+                }
+                flag = !flag;
+            }else{
+                if(node.getRight() != null){
+                    queue.add(node.getRight());
+                }
+                if(node.getLeft() != null){
+                    queue.add(node.getLeft());
+                }
+                flag = !flag;
+            }
+
         }
         return nodeDataList;
     }
