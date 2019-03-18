@@ -8,8 +8,9 @@ public class TreeNode {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TreeNode treeNode = (TreeNode) o;
 
         return data.equals(treeNode.data);
@@ -34,5 +35,13 @@ public class TreeNode {
 
     public void setRight(TreeNode right) {
         this.right = right;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 }

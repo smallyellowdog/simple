@@ -12,7 +12,7 @@ import java.util.Set;
  */
 public class TreeLength {
     public static void main(String[] args) {
-        maxDepth(new TreeNode());
+        System.out.print(maxDepth(TreeNodeTool.initData()));
     }
 
     //递归方法 DFS（深度优先搜索）

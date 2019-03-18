@@ -9,12 +9,12 @@ import java.util.Queue;
 public class MirrorTreeMain {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode();
+        TreeNode root = TreeNodeTool.initData();
         //递归方法
-        isMirror(root,root);
-
+        boolean flag = queueTree(root);
+        System.out.print(false);
         //队列迭代
-        queueTree(root);
+        //queueTree(root);
     }
     private static boolean isMirror(TreeNode treeNode1,TreeNode treeNode2){
         if(treeNode1 == null && treeNode2 == null){
